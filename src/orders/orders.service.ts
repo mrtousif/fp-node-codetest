@@ -1,9 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreateOrderDto } from './dto/create-order.dto';
-import { UpdateOrderDto } from './dto/update-order.dto';
-import { Product } from 'src/products/entities/product.entity';
-import { FileService } from 'src/file/file.service';
-import { ProductsService } from 'src/products/products.service';
+import { FileService } from '../file/file.service';
+import { ProductsService } from '../products/products.service';
 
 @Injectable()
 export class OrdersService {

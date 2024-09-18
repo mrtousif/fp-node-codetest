@@ -41,7 +41,7 @@ $ npm run test:cov
 
 ## Swagger Doc is available at <http://localhost:3000/docs>
 
-## JSON data saved in stock.json file
+## JSON data saved in stock.json file where you can update price and quantity according to your need
 
 ## Update the stock quality and price of one apparel code and size
 

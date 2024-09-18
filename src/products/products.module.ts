@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { ProductsController } from './products.controller';
-import { FileService } from 'src/file/file.service';
+import { FileService } from '../file/file.service';
 
 @Module({
   controllers: [ProductsController],
