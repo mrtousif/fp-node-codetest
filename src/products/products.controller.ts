@@ -8,10 +8,13 @@ import {
   Delete,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
-import { CreateProductDto } from './dto/create-product.dto';
-import { UpdateProductDto } from './dto/update-product.dto';
-import { ApiOperation, ApiResponse } from '@nestjs/swagger';
+import {
+  UpdateOneProductDto,
+  UpdateProductDto,
+} from './dto/update-product.dto';
+import { ApiBody, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { Product } from './entities/product.entity';
+import { CreateProductDto } from './dto/create-product.dto';
 
 @Controller('products')
 export class ProductsController {
@@ -36,6 +39,7 @@ export class ProductsController {
 
   @Patch(':code/:size')
   @ApiOperation({ summary: 'Update one apparel by code and size' })
+  @ApiBody({ type: UpdateOneProductDto })
   updateOne(
     @Param('code') code: string,
     @Param('size') size: string,
@@ -47,6 +51,7 @@ export class ProductsController {
 
   @Patch()
   @ApiOperation({ summary: 'Update many apparel using code and size' })
+  @ApiBody({ type: [CreateProductDto] })
   updateMany(@Body() updateProductDto: UpdateProductDto[]) {
     return this.productsService.updateMany(updateProductDto);
   }

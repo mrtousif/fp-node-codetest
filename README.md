@@ -108,7 +108,7 @@ Response
 
 ```json
 {
-  "totalCost": 269.9
+  "totalCost": 100
 }
 ```
 

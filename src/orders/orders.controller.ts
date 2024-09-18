@@ -10,7 +10,7 @@ import {
 import { OrdersService } from './orders.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiBody, ApiOperation, ApiResponse } from '@nestjs/swagger';
 
 @Controller('orders')
 export class OrdersController {
@@ -20,6 +20,9 @@ export class OrdersController {
   @ApiOperation({
     summary: 'Check If order satisfies fulfill the requirement',
   })
+  @ApiBody({ type: [CreateOrderDto] })
+  @ApiResponse({ status: 200, description: 'Success' })
+  @ApiResponse({ status: 400, description: 'Order cannot be fulfilled' })
   checkFulfill(@Body() createOrderDto: CreateOrderDto[]) {
     return this.ordersService.checkFulfilOrder(createOrderDto);
   }
