@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Cotton T-Shirt",
+    "code": "TSH-001",
+    "variants": [
+      {
+        "size": "M",
+        "price": 10,
+        "quantity": 12
+      },
+      {
+        "size": "L",
+        "price": 29.99,
+        "quantity": 32
+      },
+      {
+        "size": "XL",
+        "price": 60,
+        "quantity": 15
+      }
+    ]
+  },
+  {
+    "name": "Denim Jeans",
+    "code": "JEA-002",
+    "variants": [
+      {
+        "size": "L",
+        "price": 49.99,
+        "quantity": 12
+      },
+      {
+        "size": "XL",
+        "price": 52.99,
+        "quantity": 10
+      }
+    ]
+  }
+]
